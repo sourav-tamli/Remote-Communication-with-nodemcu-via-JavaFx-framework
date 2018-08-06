@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1100.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainPanelController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="78.0" layoutY="10.0" prefHeight="65.0" prefWidth="868.0" text="MAIN PANEL - STATION 1">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+      <Separator layoutX="23.0" layoutY="74.0" prefHeight="0.0" prefWidth="962.0" />
+      <Button fx:id="connectbtn" layoutX="29.0" layoutY="86.0" mnemonicParsing="false" onAction="#connection" prefHeight="27.0" prefWidth="84.0" text="CONNECT">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="disconnectbtn" layoutX="140.0" layoutY="87.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="97.0" text="DISCONNECT">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="monitorbtn" layoutX="263.0" layoutY="88.0" mnemonicParsing="false" onAction="#monitor" prefHeight="27.0" prefWidth="84.0" text="MONITOR">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="392.0" layoutY="86.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="84.0" text="VIEW">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="517.0" layoutY="86.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="84.0" text="CONTROL">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="637.0" layoutY="86.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="84.0" text="SAVE DATA">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="755.0" layoutY="86.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="84.0" text="NAVIGATE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="864.0" layoutY="88.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="84.0" text="LIST VIEW">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Separator layoutX="23.0" layoutY="131.0" prefHeight="3.0" prefWidth="969.0" />
+      <Pane layoutX="29.0" layoutY="144.0" prefHeight="267.0" prefWidth="374.0">
+         <children>
+            <Label alignment="CENTER" layoutX="124.0" layoutY="1.0" prefHeight="27.0" prefWidth="127.0" text="LIGHT 01 STATUS">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="14.0" layoutY="32.0" prefHeight="3.0" prefWidth="347.0" />
+            <ImageView fx:id="lightOnStatus" fitHeight="65.0" fitWidth="65.0" layoutX="106.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="lightOffStatus" fitHeight="65.0" fitWidth="65.0" layoutX="220.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" />
+            <Label alignment="CENTER" layoutY="167.0" prefHeight="27.0" prefWidth="84.0" text="CONTROLS">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="lightOnbtn" layoutX="106.0" layoutY="167.0" mnemonicParsing="false" onAction="#lightOn" prefHeight="27.0" prefWidth="65.0" text="ON">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="lightOffbtn" layoutX="220.0" layoutY="167.0" mnemonicParsing="false" onAction="#lightOff" prefHeight="27.0" prefWidth="65.0" text="OFF">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <LineChart layoutX="464.0" layoutY="144.0" prefHeight="257.0" prefWidth="495.0" title="LIGHT 01 GRAPHICAL STATUS">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <Pane layoutX="39.0" layoutY="455.0" prefHeight="286.0" prefWidth="374.0">
+         <children>
+            <Label alignment="CENTER" layoutX="124.0" layoutY="14.0" prefHeight="27.0" prefWidth="127.0" text="TEMPRATURE ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="11.0" layoutY="61.0" prefHeight="27.0" prefWidth="97.0" text="IN Deg Celcius">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutY="42.0" prefHeight="3.0" prefWidth="374.0" />
+            <TextField fx:id="celLbl" layoutX="134.0" layoutY="62.0" prefHeight="25.0" prefWidth="178.0" />
+            <Label alignment="CENTER" layoutX="11.0" layoutY="116.0" prefHeight="27.0" prefWidth="97.0" text="IN Farenheit">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="farLbl" layoutX="134.0" layoutY="115.0" prefHeight="27.0" prefWidth="178.0" />
+            <Label alignment="CENTER" layoutX="139.0" layoutY="163.0" prefHeight="27.0" prefWidth="97.0" text="Current Status">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="radioStop" layoutX="16.0" layoutY="19.0" mnemonicParsing="false" text="STOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </RadioButton>
+            <ImageView fx:id="tempOkCondition" fitHeight="65.0" fitWidth="65.0" layoutX="52.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="tempNeedAction" fitHeight="65.0" fitWidth="65.0" layoutX="155.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="tempForceOff" fitHeight="65.0" fitWidth="65.0" layoutX="251.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <LineChart fx:id="tempChart" layoutX="474.0" layoutY="455.0" prefHeight="257.0" prefWidth="495.0" title="TEMPERATURE GRAPHICAL STATUS">
+         <xAxis>
+            <NumberAxis side="BOTTOM" fx:id="xAxis1" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="yAxis1" side="LEFT" />
+         </yAxis>
+      </LineChart>
+      <Button layoutX="47.0" layoutY="1002.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="EXIT">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="connectionStatus" fitHeight="55.0" fitWidth="65.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+      <Label alignment="CENTER" layoutX="163.0" layoutY="743.0" prefHeight="27.0" prefWidth="127.0" text="RESISTANCE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="47.0" layoutY="808.0" prefHeight="27.0" prefWidth="97.0" text="Ohm's">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Separator layoutX="40.0" layoutY="781.0" prefHeight="3.0" prefWidth="374.0" />
+      <LineChart fx:id="resistanceChart" layoutX="474.0" layoutY="743.0" prefHeight="257.0" prefWidth="495.0" title="RESISTANCE GRAPHICAL STATUS" verticalGridLinesVisible="false">
+         <xAxis>
+            <NumberAxis side="bottom" fx:id="xAxis" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="yAxis" prefHeight="200.0" prefWidth="28.0" side="left" />
+         </yAxis>
+      </LineChart>
+      <TextField fx:id="resistanceLbl" alignment="CENTER" layoutX="163.0" layoutY="808.0" prefHeight="25.0" prefWidth="178.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <ImageView fx:id="resistanceOk" fitHeight="65.0" fitWidth="65.0" layoutX="156.0" layoutY="902.0" pickOnBounds="true" preserveRatio="true" />
+      <Label alignment="CENTER" layoutX="189.0" layoutY="853.0" prefHeight="27.0" prefWidth="97.0" text="Current Status">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="resistanceNeedAction" fitHeight="65.0" fitWidth="65.0" layoutX="252.0" layoutY="902.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
